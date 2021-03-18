@@ -2,8 +2,9 @@ import unittest
 
 class Queue:
     
-    arr = []
-    
+    def __init__(self):
+        self.arr = []
+
     def add(self,userId):
         if userId in self.arr:
             print("Sorry, userId already exist in queue, failed")
@@ -19,15 +20,13 @@ class Queue:
         if (position - 1) > len(self.arr):
             print("Array index out of bound in remove operation, failed")
         self.arr.pop(position - 1)
-
-    """Assumming position starts  1 """
+        
     def move(self,fromPosition, toPosition):
         if (toPosition - 1) > len(self.arr) and (fromPosition - 1) > len(self.arr):
             print("Array index out of bound in move operation, move operation failed")
             return
         self.arr.insert(toPosition - 1, self.arr.pop(fromPosition - 1))
-    
-    """Assumming position starts  1 """
+        
     def swap(self,pos1, pos2):
         if (pos1 - 1) > len(self.arr) and (pos2 - 1) > len(self.arr):
             print("Array index out of bound in swap operation, swap operation failed")
@@ -55,8 +54,41 @@ class TestURLPrint(unittest.TestCase):
         queue.add(3)
         queue.add(4)
         queue.add(5)
+        queue.printArr()
+        print("================")
+
+    def testQueue1(self): 
+        queue1 = Queue()
+        queue1.add(1)
+        queue1.add(2)
+        queue1.add(3)
+        queue1.add(4)
+        queue1.removeUser(2)
+        queue1.add(5)
+        queue1.printArr()
+        print("================")
+
+    def testQueue2(self): 
+        queue = Queue()
+        queue.add(1)
+        queue.add(2)
+        queue.add(3)
+        queue.add(4)
+        queue.add(5)
         queue.swap(1,5)
         queue.printArr()
+        print("================")
+
+    def testQueue3(self): 
+        queue = Queue()
+        queue.add(1)
+        queue.add(2)
+        queue.add(3)
+        queue.add(4)
+        queue.add(5)
+        queue.removeByPosition(2)
+        queue.printArr()
+        print("================")
         
 
 
