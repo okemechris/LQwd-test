@@ -1,0 +1,69 @@
+ADD 1
+ADD 2
+ADD 3
+ADD 4
+ADD 5
+
+PRINT
+
+Output
+1:1
+2:2
+3:3
+4:4
+5:5
+
+======
+ADD 1
+ADD 2
+ADD 3
+ADD 4
+REMOVE 2
+ADD 5
+
+PRINT
+
+Output
+1:1
+2:3
+3:4
+4:5
+
+===
+
+ADD 1
+ADD 2
+ADD 3
+ADD 4
+ADD 5
+
+SWAP 1,5
+
+PRINT
+
+output
+1:5
+2:2
+3:3
+4:4
+5:1
+===
+
+ADD 1
+ADD 2
+ADD 3
+ADD 4
+ADD 5
+REMOVE_POSITION,3
+PRINT
+
+output
+1:1
+2:2
+3:4
+4:5
+
+
+
+
+
